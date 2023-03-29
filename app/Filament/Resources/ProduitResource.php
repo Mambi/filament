@@ -47,10 +47,7 @@ class ProduitResource extends Resource
                     ->form(
                         function ($records, $data) {
                             return [
-                                Forms\Components\Select::make('periode')
-                                    ->label('Période')
-                                    //->options(fn () => Periode::pluck('name', 'id'))
-                                    ->required(),
+                                Forms\Components\TextInput::make('categorie')->required(),
                             ];
                         }
                     ),
